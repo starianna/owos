@@ -65,6 +65,7 @@
         <div id="thebeginning">
           <h1 class="years">
             1904
+            <button class="infobutton">test</button>
           </h1>
         </div>
       </div>
@@ -78,5 +79,26 @@
 
 </div>
     </center>
+      <script>
+var modal = document.getElementById("infoModal");
+
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+document.getElementsByClassName("infobutton").onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
   </body>
 </html>
