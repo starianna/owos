@@ -202,7 +202,7 @@ function clickedClassHandler(name,callback) {
             }
 
             if(parentChilds[x].className == name) {
-                console.log(elmParent.childNodes);
+                console.info(elmParent.childNodes);
                 index++;
             }
         }
@@ -213,7 +213,7 @@ function clickedClassHandler(name,callback) {
 
         clickedClassHandler("infobutton",function(index){
           modal.style.display = "block";
-    console.log(index);
+    console.info(index);
           document.getElementById("musicinfo").innerHTML = songinfos[index];
 });
 
