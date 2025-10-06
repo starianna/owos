@@ -183,7 +183,7 @@ var modal = document.getElementById("infoModal");
 var span = document.getElementsByClassName("close")[0];
 function clickedClassHandler(name,callback) {
 
-    var allElements = document.body.getElementsByTagName("*");
+    var allElements = document.querySelector("button");
 
     for(var x = 0, len = allElements.length; x < len; x++) {
         if(allElements[x].className == name) {
