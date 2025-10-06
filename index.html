@@ -202,9 +202,9 @@ function clickedClassHandler(name,callback) {
             }
 
             if(parentChilds[x].className == name) {
-                console.info(this.parentNode);
                 index++;
             }
+          console.info(this.parentNode);
         }
 
         callback.call(this,index);
