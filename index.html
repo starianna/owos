@@ -201,10 +201,16 @@ function clickedClassHandler(name,callback) {
                 break;
             }
 
-            if(parentChilds[x].className == name) {
+            if(this.parentNode.id == "thebeginning") {
+              if(parentChilds[x].className == name) {
                 index++;
+              }
+            } else if(this.parentNode.id == "earlyrock") {
+              if(parentChilds[x].className == name) {
+                index += 12;
+                index++;
+              }
             }
-          console.info(this.parentNode);
         }
 
         callback.call(this,index);
