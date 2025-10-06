@@ -201,9 +201,9 @@ function clickedClassHandler(name,callback) {
                 break;
             }
 
-            //if(parentChilds[x].className == name) {
+            if(parentChilds[x].className == name) {
                 index++;
-            //}
+            }
         }
 
         callback.call(this,index);
