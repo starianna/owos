@@ -181,42 +181,20 @@
 var modal = document.getElementById("infoModal");
 
 var span = document.getElementsByClassName("close")[0];
-function clickedClassHandler(name,callback) {
+function handleClickedClassIndex(className, callback) {
+    const selector = `.${className}`;
+    const elements = document.querySelectorAll(selector);
 
-    var allElements = document.querySelectorAll("button");
-
-    for(var x = 0, len = allElements.length; x < len; x++) {
-        if(allElements[x].className == name) {
-            allElements[x].onclick = handleClick;
-        }
-    }
-
-    function handleClick() {
-        var elmParent = this.parentNode;
-        var parentChilds = elmParent.childNodes;
-        var index = 0;
-
-        for(var x = 0; x < parentChilds.length; x++) {
-            if(parentChilds[x] == this) {
-                break;
-            }
-
-              if(parentChilds[x].className == name) {
-                index++;
-                console.info(this.parentNode.id);
-              } else {
-                index += 15;
-                console.info(this.parentNode.id);
-              }
-        }
-
-        callback.call(this,index);
-    }
+    elements.forEach((element, index) => {
+        element.addEventListener('click', function(event) {
+            callback(index, this);
+        });
+    });
 }
-
-        clickedClassHandler("infobutton",function(index){
+        handleClickedClassIndex("infobutton",function(index, element){
           modal.style.display = "block";
     console.info(index);
+          console.info(element);
           document.getElementById("musicinfo").innerHTML = songinfos[index];
 });
 
