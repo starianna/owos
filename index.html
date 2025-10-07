@@ -2,65 +2,77 @@
   <head>
     <title>Evolution of Rock Music - From the Beginning to the Absolute Limits</title>
     <style>
-      html {
-        height: 800%;
-      }
-      body {
-        background: linear-gradient(180deg, #555, #000, #f00, brown, #0ff);
-      }
-      #genrebar {
-        width: 25em;
-        height: 100%;
-        border-color: rgba(255, 255, 255, 0.5);
-        border-style: solid;
-      }
-      #thebeginning {
-        height: 99vh;
-        width: 24.6em;
-        position: relative;
-        background: linear-gradient(180deg, #704343, #8f7256);
-        border-color: rgba(255, 255, 255, 0.5);
-        border-style: solid;
-        z-index: 10;
-        margin-bottom: 20px;
-        float: left;
-      }
-      #earlyrock {
-        top: 102vh;
-        position: absolute;
-        height: 255.5vh;
-        width: 24.6em;
-        background: linear-gradient(180deg, #8f7256, #ac8f39, #d2a92d);
-        border-color: rgba(255, 255, 255, 0.5);
-        border-style: solid;
-        z-index: 5;
-        clear: both;
-        padding-top: 50px;
-        padding-bottom: 50px;
-      }
-      .infobutton::after {
-`        content: "";
-         display: table;
-         clear: both;
-      }
-      .years {
-        color: rgba(255, 255, 255, 0.75);
-      }
-      .infobutton {
-        margin-top: 10px;
-        background-color: rgb(0, 0, 0, 0.5);
-        color: #fff;
-      }
-      h1 {
-        margin-top: 10px;
-        margin-bottom: 15px;
-      }
-      #musicinfo {
-        color: white;
-      }
-      button {
-        position: relative;
-      }
+html {
+    min-height: 800%; 
+}
+body {
+    background: linear-gradient(180deg, #555, #000, #f00, brown, #0ff);
+    font-family: sans-serif;
+    height: auto; 
+    padding: 0;
+    margin: 0;
+}
+#genrebar {
+    min-height: 100vh; 
+    width: 25em;
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    float: left;
+}
+#thebeginning {
+    min-height: 50vh; 
+    width: 24.6em;
+    background: linear-gradient(180deg, #704343, #8f7256);
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    z-index: 10;
+    margin-bottom: 20px;
+    padding: 20px 10px; 
+}
+
+#earlyrock {
+    min-height: 100vh;
+    width: 24.6em;
+    background: linear-gradient(180deg, #8f7256, #ac8f39, #d2a92d);
+    border-color: rgba(255, 255, 255, 0.5);
+    border-style: solid;
+    z-index: 5;
+    
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.years {
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 15px; 
+}
+button {
+    position: static;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+
+.infobutton {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+h1 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#musicinfo {
+    color: white;
+}
+      
+.infobutton::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
       .modal {
   display: none;
