@@ -24,7 +24,6 @@
         z-index: 10;
         margin-bottom: 20px;
         float: left;
-        clear: both;
       }
       #earlyrock {
         top: 102vh;
@@ -36,6 +35,11 @@
         border-style: solid;
         z-index: 5;
         clear: both;
+      }
+      .infobutton::after {
+`        content: "";
+         display: table;
+         clear: both;
       }
       .years {
         color: rgba(255, 255, 255, 0.75);
